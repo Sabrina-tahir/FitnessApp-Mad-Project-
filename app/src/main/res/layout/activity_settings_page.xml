@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsPage">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:id="@+id/rdiGroup">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:layout_weight="1"
+                android:id="@+id/rdiEasy"
+                android:theme="@style/MyRadioButton"
+                />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:layout_weight="1"
+                android:id="@+id/rdiMed"
+                android:theme="@style/MyRadioButton"
+                />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hard"
+                android:layout_weight="1"
+                android:id="@+id/rdiHard"
+                android:theme="@style/MyRadioButton"
+                />
+
+        </RadioGroup>
+
+    </androidx.cardview.widget.CardView>
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardview"
+        android:textOn="On"
+        android:textOff="oFF"
+        />
+
+    <TimePicker
+        android:id="@+id/timepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="107dp"></TimePicker>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:background="#61B6AE"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
